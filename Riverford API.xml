@@ -177,4 +177,41 @@ context.setProperty("TP", new TokenPara(log, context, messageExchange.modelItem.
   <con:entry>client_id</con:entry>
   <con:entry>client_secret</con:entry>
 </con:parameterOrder>
-</con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="PostCodeChecker" id="cb2c7686-1651-4c94-9ca9-77164d293f24"><con:settings/><con:config service="https://cs17.salesforce.com" resourcePath="/services/apexrest/postcode-lookup" methodName="Postcode-lookup" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="PostCodeChecker" id="b77493b4-ea9a-4452-b2f9-8e51032deae5" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${TV}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>https://cs17.salesforce.com</con:endpoint><con:request/><con:originalUri>https://cs17.salesforce.com/services/apexrest/postcode-lookup</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="bef6dda2-7f38-4c68-9eec-1d4c44aed26a" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="postcode" value="TQ11 0JU" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>postcode</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
+</con:restRequest>
+</con:config>
+</con:testStep>
+<con:testStep type="restrequest" name="PostCodeChecker" id="cb2c7686-1651-4c94-9ca9-77164d293f24">
+<con:settings/>
+<con:config service="https://cs17.salesforce.com" resourcePath="/services/apexrest/postcode-lookup" methodName="Postcode-lookup" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<con:restRequest name="PostCodeChecker" id="b77493b4-ea9a-4452-b2f9-8e51032deae5" mediaType="application/json">
+<con:settings>
+<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${TV}" xmlns="http://eviware.com/soapui/config"/>
+</con:setting>
+</con:settings>
+<con:endpoint>https://cs17.salesforce.com</con:endpoint>
+<con:request/>
+<con:originalUri>https://cs17.salesforce.com/services/apexrest/postcode-lookup</con:originalUri>
+<con:assertion type="Valid HTTP Status Codes" id="bef6dda2-7f38-4c68-9eec-1d4c44aed26a" name="Valid HTTP Status Codes">
+<con:configuration>
+	<codes>200</codes>
+</con:configuration>
+</con:assertion>
+<con:credentials>
+	<con:authType>No Authorization</con:authType>
+</con:credentials>
+<con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/>
+<con:parameters><entry key="postcode" value="TQ11 0JU" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+<con:parameterOrder>
+	<con:entry>postcode</con:entry>
+</con:parameterOrder>
+</con:restRequest>
+</con:config>
+</con:testStep>
+<con:properties/>
+</con:testCase>
+<con:properties/>
+</con:testSuite>
+<con:properties/>
+<con:wssContainer/>
+<con:oAuth2ProfileContainer/>
+</con:soapui-project>
