@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="93d68bbc-694c-47cc-ab55-ce8f147d5059" activeEnvironment="Default" name="Riverford API" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="f656bddf-604d-4ed0-b26a-2fb97c5bb79b" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://test.salesforce.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://test.salesforce.com</con:endpoint></con:endpoints><con:resource name="Token" path="/services/oauth2/token" id="3547b30d-7ee1-4e1a-b310-5ba100bd6cd0"><con:settings/><con:parameters><con:parameter><con:name>username</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>password</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>grant_type</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>client_id</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>client_secret</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/>
+</con:parameter>
+</con:parameters>
+<con:method name="Token" id="ddc838e2-f3b2-477a-bc11-fbf7807dfb4a" method="POST"><con:settings/>
+<con:parameters/>
+<con:representation type="FAULT">
+<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+<con:status>400</con:status>
+<con:params/>
+<con:element xmlns:tok="https://test.salesforce.com/services/oauth2/token">tok:Fault</con:element>
+</con:representation>
+<con:representation type="RESPONSE">
+<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+<con:status>200</con:status>
+<con:params/>
+<con:element xmlns:tok="https://test.salesforce.com/services/oauth2/token">tok:Response</con:element>
+</con:representation>
+<con:representation type="REQUEST">
+<con:mediaType>application/json</con:mediaType>
+<con:params/>
+</con:representation>
+<con:request name="Request 1" id="66961efc-6b3e-4489-b1a5-d69f2ae55587" mediaType="application/json" postQueryString="false">
+<con:settings>
+<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+</con:settings>
+<con:endpoint>https://test.salesforce.com</con:endpoint>
+<con:request/>
+<con:originalUri>https://test.salesforce.com/services/oauth2/token</con:originalUri>
+<con:credentials>
+  <con:authType>No Authorization</con:authType>
+</con:credentials>
+<con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/>
+<con:parameters>
+  <con:entry key="username" value="integration@riverford.co.uk.devint"/>
+  <con:entry key="client_secret" value="7931633960708739442"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="client_id" value="3MVG9ahGHqp.k2_wiiGjkzSc3ZInukgUtG_7PP5tkpZBEUObHmcGO2q29nJoiqfEk5uaVzKe4m_sNTNCgQKjV"/>
+  <con:entry key="password" value="j1tt3rb1t"/>
+</con:parameters>
+<con:parameterOrder>
+  <con:entry>username</con:entry>
+  <con:entry>password</con:entry>
+  <con:entry>grant_type</con:entry>
+  <con:entry>client_id</con:entry>
+  <con:entry>client_secret</con:entry>
+</con:parameterOrder>
+</con:request>
+</con:method>
+</con:resource>
+</con:interface>
+<con:interface xsi:type="con:RestService" id="4703e891-e81a-427c-8211-d5d56a21c0e3" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://cs17.salesforce.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<con:settings/>
+<con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://cs17.salesforce.com</con:endpoint>
+  </con:endpoints>
+<con:resource name="Postcode-lookup" path="/services/apexrest/postcode-lookup" id="274d4b3e-231b-44ae-a0d3-3b255f9f619e">
+<con:settings/>
+<con:parameters>
+  <con:parameter>
+  <con:name>postcode</con:name>
+  <con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/>
+  </con:parameter>
+</con:parameters>
+<con:method name="Postcode-lookup" id="acdc8c72-9161-4816-a2d6-b7bf19f2d8dc" method="GET">
+<con:settings/>
+<con:parameters/>
+<con:representation type="RESPONSE"><con:mediaType>application/octetstream</con:mediaType>
+<con:status>200</con:status><con:params/><con:element>data</con:element></con:representation>
+<con:representation type="FAULT">
+<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+<con:status>401</con:status>
+<con:params/><con:element>Fault</con:element>
+</con:representation>
+<con:request name="Request 1" id="b77493b4-ea9a-4452-b2f9-8e51032deae5" mediaType="application/json">
+<con:settings>
+<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer 00Dg0000006Qz8h!AQgAQOevTJj2emAvqYpJDsjEmLt8NIFkyZmjBfCV3lHvsC0LsXTVMMaKlNxrxr8Oft5ktJ4LPTb3yckXeFCC73.8tuZJKmDX" xmlns="http://eviware.com/soapui/config"/>
+</con:setting>
+</con:settings>
+<con:endpoint>https://cs17.salesforce.com</con:endpoint>
+<con:request/>
+<con:originalUri>https://cs17.salesforce.com/services/apexrest/postcode-lookup</con:originalUri>
+<con:credentials>
+<con:authType>No Authorization</con:authType></con:credentials>
+<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+<con:jmsPropertyConfig/><con:parameters><entry key="postcode" value="TQ11 0JU" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>postcode</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="5c423b99-11db-49e8-b70d-2dabf6e511b8" name="Postcode-lookup"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="789a8205-6061-427e-b95b-d238fc2b42e4" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase" searchProperties="true"><con:settings/><con:testStep type="properties" name="TokenVal" id="fdd6d0fb-96c4-4337-9941-4be5044adb77"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>TV</con:name><con:value>Bearer 00Dg0000006Qz8h!AQgAQFgpQy_TUcMosUroqT27GEQ_IG4oNy1_RoAq3nrnXKi37hdk4Nfyjw5bEtZ4VY_3fErft3eHE6uRkSSbmMzfd78h_8tx</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="d3b9dc40-94f1-4f50-871d-f00b6276ae8e"><con:settings/>
+<con:config service="https://test.salesforce.com" resourcePath="/services/oauth2/token" methodName="Token" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<con:restRequest name="REST Request" id="66961efc-6b3e-4489-b1a5-d69f2ae55587" mediaType="application/json" postQueryString="false">
+<con:settings>
+<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+</con:settings>
+<con:endpoint>https://test.salesforce.com</con:endpoint>
+<con:request/><con:originalUri>https://test.salesforce.com/services/oauth2/token</con:originalUri>
+<con:assertion type="Schema Compliance" id="5402f09b-48bd-499e-89ad-5a563eb1b9c1" name="Schema Compliance">
+<con:configuration/>
+</con:assertion>
+<con:assertion type="GroovyScriptAssertion" id="01cfb91e-f8a9-4f2b-8b14-88f5664a84e2" name="Script Assertion">
+<con:configuration>
+<scriptText>import groovy.json.JsonSlurper
+
+// To capture responce and store into variable
+def respoceHold = messageExchange.response.responseContent
+
+// To pass responce for JsonSlurper
+def jsonSlurper = new JsonSlurper().parseText(respoceHold)
+
+//assert !(jsonSlurper.isEmpty())
+		
+		def tokenType = jsonSlurper.token_type
+		def accessToken = jsonSlurper.access_token
+		def headerValue = "$tokenType $accessToken"
+		//log.info "$headerValue"
+
+		//To set property value as fetched excel cell value  
+     	messageExchange.modelItem.testCase.testSteps['TokenVal'].setPropertyValue("TV",headerValue)
+
+		
+
+/*class TokenPara
+{
+	def log
+	def context
+	def testRunner
+
+	def TokenPara(logIn, contextIn, testRunnerIn)
+	{
+		this.log = logIn
+		this.context = contextIn
+		this.testRunner = testRunnerIn
+	}
+		
+	public String getHeaderValue()
+	{
+		// To verify response is not empty
+		assert !(jsonSlurper.isEmpty())
+		
+		def tokenType = jsonSlurper.token_type
+		def accessToken = jsonSlurper.access_token
+		def headerValue = "$tokenType $accessToken"
+		log.info "$tokenType $accessToken"
+		return headerValue
+	}
+	
+}
+context.setProperty("TP", new TokenPara(log, context, messageExchange.modelItem.testStep))*/
+
+
+
+/*testRunner.testCase.testSteps['DaynamicParameter'].addProperty("City")
+	testRunner.testCase.testSteps['DaynamicParameter'].setPropertyValue("City",CellVal)
+	//To fatched property value
+	def TestStepVal  = testRunner.testCase.testSteps['DaynamicParameter'].getPropertyValue("City")
+*/	
+
+
+
+
+</scriptText>
+</con:configuration>
+</con:assertion>
+<con:credentials>
+<con:authType>No Authorization</con:authType>
+</con:credentials>
+<con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/>
+<con:parameters>
+  <con:entry key="username" value="integration@riverford.co.uk.devint"/>
+  <con:entry key="client_secret" value="7931633960708739442"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="client_id" value="3MVG9ahGHqp.k2_wiiGjkzSc3ZInukgUtG_7PP5tkpZBEUObHmcGO2q29nJoiqfEk5uaVzKe4m_sNTNCgQKjV"/>
+  <con:entry key="password" value="j1tt3rb1t"/>
+</con:parameters>
+<con:parameterOrder>
+  <con:entry>username</con:entry>
+  <con:entry>password</con:entry>
+  <con:entry>grant_type</con:entry>
+  <con:entry>client_id</con:entry>
+  <con:entry>client_secret</con:entry>
+</con:parameterOrder>
+</con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="PostCodeChecker" id="cb2c7686-1651-4c94-9ca9-77164d293f24"><con:settings/><con:config service="https://cs17.salesforce.com" resourcePath="/services/apexrest/postcode-lookup" methodName="Postcode-lookup" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="PostCodeChecker" id="b77493b4-ea9a-4452-b2f9-8e51032deae5" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${TV}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>https://cs17.salesforce.com</con:endpoint><con:request/><con:originalUri>https://cs17.salesforce.com/services/apexrest/postcode-lookup</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="bef6dda2-7f38-4c68-9eec-1d4c44aed26a" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="postcode" value="TQ11 0JU" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>postcode</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
